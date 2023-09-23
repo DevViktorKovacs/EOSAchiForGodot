@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7kyd1n7hrg1b"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_r85lw"]
+[ext_resource type="PackedScene" uid="uid://c584qrabf4yu8" path="res://EOSManager.tscn" id="2_hjucs"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_r85lw")
+
+[node name="EOSManager" parent="." instance=ExtResource("2_hjucs")]
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 30.0
+offset_top = 100.0
+offset_right = 1111.0
+offset_bottom = 358.0
+allow_reselect = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 21.0
+offset_right = 70.0
+offset_bottom = 44.0
+text = "Status"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 61.0
+offset_right = 70.0
+offset_bottom = 84.0
+text = "Avaible achievements:"
+
+[node name="ItemList2" type="ItemList" parent="."]
+offset_left = 30.0
+offset_top = 400.0
+offset_right = 1111.0
+offset_bottom = 600.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 365.0
+offset_right = 70.0
+offset_bottom = 388.0
+text = "Unlocked achievements:"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 61.0
+offset_right = 640.0
+offset_bottom = 84.0
+text = "Selected:"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 856.0
+offset_top = 57.0
+offset_right = 918.0
+offset_bottom = 88.0
+text = "Unlock"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 953.0
+offset_top = 57.0
+offset_right = 1015.0
+offset_bottom = 88.0
+text = "Logout"
+
+[connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="Button2" to="." method="_on_button_2_button_up"]

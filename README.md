@@ -15,3 +15,6 @@ EOS Achievements implementation for Godot mono
 **Configuration**:
 - In the EOSSettings.cs file, replace the `[YOUR DATA]` placeholders with the appropriate credentials and configuration settings.
 
+**Video Tutorial**:
+
+[![Watch the video](https://img.youtube.com/vi/kO3Zz124oi8/maxresdefault.jpg)](https://youtu.be/kO3Zz124oi8)
